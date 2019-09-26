@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Schedule</string>
+    <string name="subject_name">Subject Name</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="add_subject">Add Subject</string>
 </resources>
