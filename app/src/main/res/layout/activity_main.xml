@@ -17,24 +17,67 @@
 
 
 
-        <FrameLayout
-            android:id="@+id/fragment_container"
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_below="@id/menu_bar">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@id/bottom_navigation"
-            android:layout_below="@id/menu_bar"/>
+            android:layout_height="120dp"
+            android:background="#D7DA95">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/now_studing"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="70dp"
+            app:cardCornerRadius="25dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/subject_name"
+                android:text="This is name"
+                android:textSize="24sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"
+                android:textColor="#000"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/start_and_end_time"
+                android:text="12:00 - 14:00"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="50dp"
+                android:textSize="18sp"
+                android:textColor="#000"/>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
 
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="bottom"
-            android:background="@color/colorPrimary"
-            app:itemIconTint="#FFF"
-            app:itemTextColor="#FFF"
-            app:menu="@menu/bottom_navigation_menu" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="#FFF"
+        app:itemTextColor="#FFF"
+        app:menu="@menu/bottom_navigation_menu" />
 
 
 

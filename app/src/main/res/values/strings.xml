@@ -4,4 +4,8 @@
     <string name="start_time">Start Time</string>
     <string name="end_time">End Time</string>
     <string name="add_subject">Add Subject</string>
+    <string name="add_room">Classroom</string>
+    <string name="title_activity_add_subject">AddSubjectActivity</string>
+    <string name="save">Save</string>
+    <string name="now_studing">Now Studing</string>
 </resources>

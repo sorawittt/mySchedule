@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -27,8 +28,12 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.addSubject -> {
-                replaceFragment(AddSubjectFragment.newInstance())
+                startActivity(Intent(this, AddSubjectActivity::class.java))
             }
+
+//            R.id.addSubject -> {
+//                replaceFragment(AddSubjectFragment.newInstance())
+//            }
         }
         return super.onOptionsItemSelected(item)
     }
