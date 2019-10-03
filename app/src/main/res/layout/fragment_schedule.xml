@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#D7DA95">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/kanit"
+            android:text="@string/now_studing"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="70dp"
+        app:cardCornerRadius="25dp">
+
+        <TextView
+            android:id="@+id/subject_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="13dp"
+            android:fontFamily="@font/kanit"
+            android:text="This is name"
+            android:textColor="#AD000000"
+            android:textSize="24sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/start_and_end_time"
+            android:text="12:00 - 14:00"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
+            android:textSize="18sp"
+            android:textColor="#AD000000"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ad"
+            android:text=" @"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="43dp"
+            android:textSize="23sp"
+            android:textColor="#6B000000"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/classroom"
+            android:text="Sc45 803"
+            android:layout_marginStart="155dp"
+            android:layout_marginTop="50dp"
+            android:textSize="18sp"
+            android:textColor="#AD000000"/>
+
+        <TextView
+            android:id="@+id/no_study"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Empty"
+            android:textColor="#AD000000"
+            android:visibility="invisible"
+            android:textSize="30sp" />
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

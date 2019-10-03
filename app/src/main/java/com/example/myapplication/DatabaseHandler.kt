@@ -33,17 +33,24 @@ class DatabaseHandler (context: Context) :
         return (Integer.parseInt("$success") != -1)
     }
 
-//    fun getSubject() : String {
-//        var subject = ""
-//        val db = readableDatabase
-//        val selectQuery = "SELECT * FROM Schedule WHERE day = 0"
-//        val cursor = db.rawQuery(selectQuery, null)
-//        if (cursor != null) {
-//            if (cursor.moveToFirst()) {
-////                id
-//            }
-//        }
-//    }
+    fun getSubject() : Array<String> {
+        val db = readableDatabase
+        var name = ""
+        var classroom = ""
+        var startTime = ""
+        var endTime = ""
+        val selectQuery = "SELECT * FROM Schedule WHERE day = 4"
+        val cursor = db.rawQuery(selectQuery, null)
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                name = cursor.getString(cursor.getColumnIndex("name"))
+                classroom = cursor.getString(cursor.getColumnIndex("classroom"))
+                startTime = cursor.getString(cursor.getColumnIndex("start_time"))
+                endTime = cursor.getString(cursor.getColumnIndex("end_time"))
+            }
+        }
+        return arrayOf(name, classroom, startTime, endTime)
+    }
 
 
 }

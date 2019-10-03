@@ -1,14 +1,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/item1"
+        android:id="@+id/navigation_schedule"
         android:title="Today"
-        android:icon="@drawable/ic_school_24px"/>
+        android:icon="@drawable/ic_school_press"/>
     <item
-        android:id="@+id/group_item1"
+        android:id="@+id/navigation_week"
         android:title="All"
-        android:icon="@drawable/ic_calendar_today_24px"/>
+        android:icon="@drawable/ic_calendar_press"/>
     <item
-        android:id="@+id/group_item2"
-        android:title="Work"
-        android:icon="@drawable/ic_work_outline_24px"/>
+        android:id="@+id/navigation_homework"
+        android:title="Homework"
+        android:icon="@drawable/ic_work_press"/>
 </menu>

@@ -137,7 +137,7 @@ class AddSubjectActivity : AppCompatActivity() {
                     }
 
                     start_time.text = "$hour : $minute"
-                    startTime = "$hour : $minute"
+                    startTime = "$hour:$minute"
 
                 }),hour,minute,true)
 
@@ -163,7 +163,7 @@ class AddSubjectActivity : AppCompatActivity() {
                     }
 
                     end_time.text = "$hour : $minute"
-                    endTime = "$hour : $minute"
+                    endTime = "$hour:$minute"
 
                 }),hour,minute,true)
 
@@ -182,6 +182,8 @@ class AddSubjectActivity : AppCompatActivity() {
                 }
             }
             Log.e("day", days.contentToString())
+            finish()
+            startActivity(intent)
         }
 
     }

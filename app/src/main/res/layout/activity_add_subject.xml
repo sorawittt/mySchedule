@@ -203,14 +203,6 @@
                 android:layout_centerHorizontal="true"
                 app:cornerRadius="25dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="200dp"
-                android:textSize="40sp"
-                android:id="@+id/test"
-                android:text="Hello"/>
-
         </RelativeLayout>
 
     </RelativeLayout>
