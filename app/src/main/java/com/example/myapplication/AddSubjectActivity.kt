@@ -126,7 +126,7 @@ class AddSubjectActivity : AppCompatActivity() {
             val tpd = TimePickerDialog(this,
                 TimePickerDialog.OnTimeSetListener(function = { _, h, m ->
 
-                    Toast.makeText(this, "$h : $m : ", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "$h : $m", Toast.LENGTH_LONG).show()
                     var hour = h.toString()
                     var minute = m.toString()
                     if (h < 10) {
@@ -152,7 +152,7 @@ class AddSubjectActivity : AppCompatActivity() {
             val tpd = TimePickerDialog(this,
                 TimePickerDialog.OnTimeSetListener(function = { _, h, m ->
 
-                    Toast.makeText(this, "$h : $m : ", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "$h : $m", Toast.LENGTH_LONG).show()
                     var hour = h.toString()
                     var minute = m.toString()
                     if (h < 10) {

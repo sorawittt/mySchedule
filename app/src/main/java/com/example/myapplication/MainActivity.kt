@@ -12,8 +12,10 @@ import androidx.core.view.isInvisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_all_homework.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 
@@ -32,10 +34,13 @@ class MainActivity : AppCompatActivity() {
         }
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.tool_bar_menu, menu)
+
         return true
     }
 
@@ -44,10 +49,9 @@ class MainActivity : AppCompatActivity() {
             R.id.addSubject -> {
                 startActivity(Intent(this, AddSubjectActivity::class.java))
             }
-
-//            R.id.addSubject -> {
-//                replaceFragment(AddSubjectFragment.newInstance())
-//            }
+            R.id.addHomework -> {
+                startActivity(Intent(this, AddHomeworkActivity::class.java))
+            }
         }
         return super.onOptionsItemSelected(item)
     }
@@ -68,6 +72,16 @@ class MainActivity : AppCompatActivity() {
                     toast("All Schedule")
                 else {
                     replaceFragment(AllScheduleFragment.newInstance())
+                    selectedItemId = item.itemId
+
+                }
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.navigation_homework -> {
+                if (item.itemId == selectedItemId)
+                    toast("All Homework")
+                else {
+                    replaceFragment(AllHomeworkFragment.newInstance())
                     selectedItemId = item.itemId
 
                 }
