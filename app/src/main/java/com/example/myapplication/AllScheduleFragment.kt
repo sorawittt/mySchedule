@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.model.ExpandableAdapter
 import kotlinx.android.synthetic.main.expandable_schedule.*
-import kotlinx.android.synthetic.main.fragment_all_homework.*
 
 class AllScheduleFragment : Fragment() {
     private var dbHandler: DatabaseHandler? = null
@@ -33,39 +32,39 @@ class AllScheduleFragment : Fragment() {
 
         dbHandler = activity?.let { DatabaseHandler(it) }
 
-        val monday : MutableList<String> = dbHandler!!.getSubjectByday(1)
+        val monday : MutableList<String> = dbHandler!!.getSubjectByday(2)
         if (monday.size == 0) {
             monday.add("No class")
         }
-        val tuesday : MutableList<String> = dbHandler!!.getSubjectByday(2)
+        val tuesday : MutableList<String> = dbHandler!!.getSubjectByday(3)
         if (tuesday.size == 0) {
             tuesday.add("No class")
         }
-        val wednesday : MutableList<String> = dbHandler!!.getSubjectByday(3)
+        val wednesday : MutableList<String> = dbHandler!!.getSubjectByday(4)
         if (wednesday.size == 0) {
             wednesday.add("No class")
         }
-        val thursday : MutableList<String> = dbHandler!!.getSubjectByday(4)
+        val thursday : MutableList<String> = dbHandler!!.getSubjectByday(5)
         if (thursday.size == 0) {
             thursday.add("No class")
         }
-        val friday : MutableList<String> = dbHandler!!.getSubjectByday(5)
+        val friday : MutableList<String> = dbHandler!!.getSubjectByday(6)
         if (friday.size == 0) {
             friday.add("No class")
         }
-        val saturday : MutableList<String> = dbHandler!!.getSubjectByday(6)
+        val saturday : MutableList<String> = dbHandler!!.getSubjectByday(7)
         if (saturday.size == 0) {
             saturday.add("No class")
         }
-        val sunday : MutableList<String> = dbHandler!!.getSubjectByday(0)
+        val sunday : MutableList<String> = dbHandler!!.getSubjectByday(1)
         if (sunday.size == 0) {
             sunday.add("No class")
         }
 
         header.add("Monday")
-        header.add("Tuesday ")
-        header.add("Wednesday ")
-        header.add("Thursday ")
+        header.add("Tuesday")
+        header.add("Wednesday")
+        header.add("Thursday")
         header.add("Friday")
         header.add("Saturday")
         header.add("Sunday")

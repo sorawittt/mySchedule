@@ -7,8 +7,4 @@
         android:id="@+id/navigation_week"
         android:title="All"
         android:icon="@drawable/ic_calendar_press"/>
-    <item
-        android:id="@+id/navigation_homework"
-        android:title="Homework"
-        android:icon="@drawable/ic_work_press"/>
 </menu>

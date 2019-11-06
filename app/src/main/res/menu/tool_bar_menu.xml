@@ -4,6 +4,7 @@
         android:id="@+id/addSubject"
         android:title="Add subject" />
     <item
-        android:id="@+id/addHomework"
-        android:title="Add homework" />
+        android:id="@+id/clear_schedule"
+        android:title="Clear schedule"/>
+
 </menu>

@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="#D7DA95">
+        android:background="#648494">
 
         <TextView
             android:layout_width="wrap_content"
@@ -17,6 +17,7 @@
             android:layout_marginTop="20dp"
             android:fontFamily="@font/kanit"
             android:text="@string/now_studing"
+            android:textColor="#FFF"
             android:textSize="20sp" />
 
     </RelativeLayout>

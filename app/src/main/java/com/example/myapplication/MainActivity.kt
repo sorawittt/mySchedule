@@ -15,7 +15,6 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_all_homework.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 
@@ -45,13 +44,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        dbHandler = DatabaseHandler(this)
         when (item.itemId) {
             R.id.addSubject -> {
                 startActivity(Intent(this, AddSubjectActivity::class.java))
             }
-            R.id.addHomework -> {
-                startActivity(Intent(this, AddHomeworkActivity::class.java))
+            R.id.clear_schedule -> {
+                dbHandler?.deleteSchedule()
+                Toast.makeText(this, "Clear schedule success",  Toast.LENGTH_LONG).show()
             }
+
         }
         return super.onOptionsItemSelected(item)
     }
@@ -72,16 +74,6 @@ class MainActivity : AppCompatActivity() {
                     toast("All Schedule")
                 else {
                     replaceFragment(AllScheduleFragment.newInstance())
-                    selectedItemId = item.itemId
-
-                }
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.navigation_homework -> {
-                if (item.itemId == selectedItemId)
-                    toast("All Homework")
-                else {
-                    replaceFragment(AllHomeworkFragment.newInstance())
                     selectedItemId = item.itemId
 
                 }

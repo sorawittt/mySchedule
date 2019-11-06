@@ -85,27 +85,11 @@ class DatabaseHandler (context: Context) :
         return subjects
     }
 
-//    fun getSubjectNameAndId() : ArrayList<Subject> {
-//        val db = readableDatabase
-//        var id = ""
-//        val checkDuplicate = arrayListOf<String>()
-//        val subjects = arrayListOf<Subject>()
-//        val selectQuery = "SELECT id, name FROM Schedule"
-//        val cursor = db.rawQuery(selectQuery, null)
-//        if (cursor != null) {
-//            if (cursor.moveToFirst()) {
-//                id = cursor.getString(cursor.getColumnIndex("id"))
-//                if (id !in checkDuplicate) {
-//                    checkDuplicate.add(id)
-//                    subjects.add(Subject(cursor.getString(cursor.getColumnIndex("id")), cursor.getColumnIndex("id")))
-//                }
-//            }
-//        }
-//        return subjects
-//
-//    }
-//
-//    fun addHomework(name:String, due_date:String, detail:String) {}
+    fun deleteSchedule() {
+        val db = readableDatabase
+        db.execSQL("delete from Schedule")
+    }
+
 
 
 }
