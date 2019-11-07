@@ -5,6 +5,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
+import android.widget.Toast
 import com.example.myapplication.model.Subject
 import java.lang.reflect.Array
 
@@ -88,6 +89,11 @@ class DatabaseHandler (context: Context) :
     fun deleteSchedule() {
         val db = readableDatabase
         db.execSQL("delete from Schedule")
+    }
+
+    fun deleteSubject(subjectId : String) {
+        val db = readableDatabase
+        db.execSQL("delete from Schedule WHERE id=$subjectId")
     }
 
 

@@ -18,6 +18,7 @@ import java.time.format.DateTimeFormatter
 import java.util.*
 
 class ScheduleFragment : Fragment() {
+
     private var dbHandler: DatabaseHandler? = null
     private var root: View? = null
     val calendar = Calendar.getInstance()
@@ -43,11 +44,19 @@ class ScheduleFragment : Fragment() {
             dbHandler = activity?.let { DatabaseHandler(it) }
             val subject = dbHandler!!.getSubject(day, formatted)[0]
 
+
             Log.e("2", dbHandler!!.getSubject(day, formatted).toString())
             Log.e("Now", formatted)
             Log.e("day", day.toString())
 
             Log.e("database", subject.name + " " +  subject.classroom + " " + subject.startTime + " " + subject.endTime)
+
+            val textview = root!!.status
+            if (subject.startTime <= formatted) {
+                textview.text = "Now Studying"
+            } else {
+                textview.text = "Upcoming Class"
+            }
         } catch (e:Exception) {
             root = inflater.inflate(R.layout.fragment_schedule_empty, container,
                 false)
@@ -73,7 +82,7 @@ class ScheduleFragment : Fragment() {
 
 
         subjectAdapter.notifyDataSetChanged()
-
-
     }
+
+
 }

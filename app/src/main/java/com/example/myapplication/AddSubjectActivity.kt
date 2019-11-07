@@ -125,7 +125,7 @@ class AddSubjectActivity : AppCompatActivity() {
 
         start_time.setOnClickListener {
             val c = Calendar.getInstance()
-            val hour = c.get(Calendar.HOUR)
+            val hour = c.get(Calendar.HOUR) + 12
             val minute = c.get(Calendar.MINUTE)
 
             val tpd = TimePickerDialog(this,
@@ -151,7 +151,7 @@ class AddSubjectActivity : AppCompatActivity() {
 
         end_time.setOnClickListener {
             val c = Calendar.getInstance()
-            val hour = c.get(Calendar.HOUR)
+            val hour = c.get(Calendar.HOUR) + 12
             val minute = c.get(Calendar.MINUTE)
 
             val tpd = TimePickerDialog(this,

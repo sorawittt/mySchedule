@@ -8,7 +8,7 @@
     <string name="title_activity_add_subject">AddSubjectActivity</string>
     <string name="title_activity_add_homework">AddHomeworkActivity</string>
     <string name="save">Save</string>
-    <string name="now_studing">Now Studing</string>
+    <string name="now_studying">Now Studying</string>
     <string name="add_homework">Add Homework</string>
     <string name="select_subject">Select Subject</string>
     <string name="detail">Detail</string>

@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.model.ExpandableAdapter
 import kotlinx.android.synthetic.main.expandable_schedule.*
 
 class AllScheduleFragment : Fragment() {
+
     private var dbHandler: DatabaseHandler? = null
 
     val header : MutableList<String> = ArrayList()
@@ -21,10 +21,9 @@ class AllScheduleFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-
         return inflater.inflate(R.layout.expandable_schedule, container, false)
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
@@ -79,4 +78,5 @@ class AllScheduleFragment : Fragment() {
 
         expandableListView.setAdapter(ExpandableAdapter(this.activity!!,expandableListView, header, body))
     }
+
 }

@@ -16,7 +16,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/kanit"
-            android:text="@string/now_studing"
+            android:id="@+id/status"
+            android:text="@string/now_studying"
             android:textColor="#FFF"
             android:textSize="20sp" />
 
